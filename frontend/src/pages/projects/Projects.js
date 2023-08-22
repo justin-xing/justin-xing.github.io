@@ -1,5 +1,9 @@
+import classes from './Projects.module.css';
+
 const Projects = () => {
-    return <div>Projects</div>;
+    return (
+      <div className={classes.projectsWrapper}>Projects</div>
+    );
 }
 
 export default Projects

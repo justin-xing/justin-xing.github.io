@@ -1,0 +1,11 @@
+.footerWrapper {
+  background-color: #ececec;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerText {
+  font-size: 0.7vw
+}

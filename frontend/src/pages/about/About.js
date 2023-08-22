@@ -1,5 +1,10 @@
+import classes from './About.module.css';
+
 const About = () => {
-    return <div>About</div>
+    return (
+      <div className={classes.aboutWrapper}>About</div>
+    );
+    
 }
 
 export default About;
