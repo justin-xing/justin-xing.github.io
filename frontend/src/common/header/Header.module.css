@@ -1,0 +1,29 @@
+.header {
+  height: 60px;
+  width: 97vw;
+  position: fixed;
+  z-index: 99999;
+  background-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+}
+
+.headerLeft {
+  width: 15vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.headerRight {
+  width: 15vw;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}

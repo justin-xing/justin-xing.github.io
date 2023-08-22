@@ -1,0 +1,12 @@
+.name {
+  font-weight: 700;
+  font-size: 6vw;
+  letter-spacing: 0.5em;
+}
+
+.homeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

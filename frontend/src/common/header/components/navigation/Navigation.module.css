@@ -1,0 +1,28 @@
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.listItemText {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 699px) {
+  .labelText {
+    color: transparent;
+    font-size: 0;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .labelText {
+    padding-left: 0.5vw;
+    font-size: 20px;
+    color: black;
+  }
+}
+
