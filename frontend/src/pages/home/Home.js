@@ -1,9 +1,9 @@
-import styles from './Home.module.css'
+import classes from './Home.module.css'
 
 const Home = () => {
   return (
-    <div className={styles.homeWrapper}>
-      <div className={styles.name}>
+    <div className={classes.homeWrapper}>
+      <div className={`${classes.name} ${classes.animateCharacter}`}>
         JUSTIN XING
       </div>
     </div>
