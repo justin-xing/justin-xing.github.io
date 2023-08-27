@@ -9,7 +9,7 @@ const ResumeButton = (props) => {
     <div className={props.className}>
         <IconButton href={Resume} target='_blank'>
           <ArticleIcon/>
-          <div className={classes.labelText}>Resume</div>
+          <div className={classes.labelText}>RESUME</div>
         </IconButton>
     </div>
   );

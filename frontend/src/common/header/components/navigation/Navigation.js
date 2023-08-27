@@ -26,11 +26,11 @@ const Navigation = (props) => {
     if (locationPath === '/') {
       setPath('')
     } else if (locationPath === '/about') {
-      setPath('About')
+      setPath('ABOUT')
     } else if (locationPath === '/projects') {
-      setPath('Projects');
+      setPath('PROJECTS');
     } else if (locationPath === '/blog') {
-      setPath('Blog')
+      setPath('BLOG')
     }
   }, [locationPath])
 
