@@ -1,10 +1,14 @@
 import classes from './About.module.css';
 
+import pfp from '../../assets/pfp.PNG';
+
 const About = () => {
     return (
       <div className={classes.aboutWrapper}>
         <div className={classes.card}>
-          <div className={classes.imageWrapper}>Image here</div>
+          <div className={classes.imageWrapper}>
+            <img src={pfp} alt='Justin Xing' className={classes.profileShot}/>
+          </div>
           <div className={classes.personal}>
             <div className={classes.name}>JUSTIN XING</div>
             <div className={classes.title}>Software Engineer</div>
