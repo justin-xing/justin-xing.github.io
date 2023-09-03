@@ -41,8 +41,8 @@ const Navigation = (props) => {
       <Box sx={{width: 250, paddingTop: '70px'}} role='presentation' onClick={closeDrawer} onKeyDown={closeDrawer}>
         <ul className={classes.list}>
           {itemArray.map((item) => (
-            <li>
-              <Button key={item[0]}>
+            <li key={item[0]}>
+              <Button>
                 <NavLink to={item[1]} className={classes.listItemText}>
                   {item[0]}
                 </NavLink>
