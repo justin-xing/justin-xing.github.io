@@ -16,7 +16,7 @@ const About = () => {
           <div className={classes.description}>
             Hey! I'm a computer science co-op student at the University of Waterloo set to graduate in 2027.
             As a self-taught software developer, I pride myself on my capacity to quickly learn about anything I set my eyes on,
-            software related or not. My current expertise lies within web development, but I've also got my sights set on data and ML.
+            software related or not. My current expertise lies within web development, but I'm looking to explore other areas!
             Outside of dev, I love to rock climb and go on adventures with my cat.
           </div>
         </div>
