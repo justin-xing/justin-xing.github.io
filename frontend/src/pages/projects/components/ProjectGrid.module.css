@@ -33,6 +33,7 @@
         min-height: 0;
         box-sizing: border-box;
         overflow: hidden;
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.37);
     }
 
     .projectTwo {
@@ -42,6 +43,7 @@
         min-height: 0;
         box-sizing: border-box;
         overflow: hidden;
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.37);
     }
 
     .projectThree {
@@ -53,6 +55,7 @@
         min-height: 0;
         box-sizing: border-box;
         overflow: hidden;
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.37);
     }
 
     .projectFour {
@@ -63,5 +66,6 @@
         min-height: 0;
         box-sizing: border-box;
         overflow: hidden;
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.37);
     }
 }
