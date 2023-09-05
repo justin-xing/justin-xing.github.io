@@ -1,0 +1,67 @@
+@media screen and (max-width: 999px) {
+    .projectGridWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    .projectGridWrapper section {
+        width: 70vw;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .projectGridWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+        width: 60vw;
+        height: 35vw;
+        background-color: white;
+        padding: 30px;
+    }
+
+    .projectOne {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        width: 200%;
+        height: 200%;
+        min-width: 0;
+        min-height: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .projectTwo {
+        grid-row: 3 / 3;
+        grid-column: 1 / 1;
+        min-width: 0;
+        min-height: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .projectThree {
+        grid-row: 3 / 3;
+        grid-column: 2 / 3;
+        width: 200%;
+        margin-left: 1%;
+        min-width: 0;
+        min-height: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .projectFour {
+        grid-row: 1 / 2;
+        grid-column: 3 / 3;
+        height: 200%;
+        min-width: 0;
+        min-height: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+}
