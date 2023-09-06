@@ -8,7 +8,7 @@ const Project = (props) => {
                 alt="project"
                 className={classes.image}
                 style={{
-                    width: props.type === "width" ? "120%" : null,
+                    width: props.type === "width" ? "125%" : null,
                     height: props.type === "height" ? "100%" : null,
                 }}
             />
