@@ -1,41 +1,70 @@
 .name {
   font-weight: 700;
   font-size: 6vw;
-  letter-spacing: 0.5em;
-}
-
-.homeWrapper {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+  text-align: center;
+
 }
 
-.animateCharacter
-{
-  text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
-  display: inline-block;
+.space {
+    width: 1vw;
 }
 
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
+@keyframes popInOne {
+    0% {
+        opacity: 0;
+        transform: scale(1.5, 1.5);
+    }
+    66% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes popInTwo {
+    0% {
+        opacity: 0;
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes popInThree {
+    0% {
+        opacity: 0;
+        transform: scale(1.5, 1.5);
+    }
+    33% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+.letter {
+    width: fit-content;
+    margin: 1.5vw;
+    overflow: visible;
+}
+
+.letter:nth-child(3n - 2) {
+    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 popInOne;
+}
+
+.letter:nth-child(3n - 1) {
+    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 popInTwo;
+}
+
+.letter:nth-child(3n) {
+    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 popInThree;
+}
+
+.homeWrapper {
+  height: 95vh;
 }

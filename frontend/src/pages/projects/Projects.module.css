@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 .projectsWrapper {
     min-height: 100vh;
     display: flex;
@@ -5,4 +14,5 @@
     align-items: center;
     padding-top: 80px;
     background-color: #f5f5f5;
+    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
 }

@@ -1,0 +1,66 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    filter: blur(3px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.imageOne {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
+}
+
+.imageTwo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
+}
+
+.imageThree {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
+}
+
+.imageFour {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
+}

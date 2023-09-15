@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 .aboutWrapper {
   min-height: 100vh;
   background-color: #f5f5f5;
@@ -6,6 +15,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 60px;
+  animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
 }
 
 .card {
