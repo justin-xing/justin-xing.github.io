@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c3d2ce5.css",
-    "main.js": "/static/js/main.63d1c125.js",
+    "main.css": "/static/css/main.ded0fdcf.css",
+    "main.js": "/static/js/main.30bc71a6.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/pfp.PNG": "/static/media/pfp.c6c27472fa1ce44cd758.PNG",
+    "static/media/busan.jpg": "/static/media/busan.16ed9a29c623f36d6236.jpg",
+    "static/media/jeju.jpg": "/static/media/jeju.456b89195f61f69340ce.jpg",
+    "static/media/niagara.jpg": "/static/media/niagara.f5002dd74c0b7ff63209.jpg",
+    "static/media/waterloo.jpg": "/static/media/waterloo.cae3c803fbdb88945ea6.jpg",
     "static/media/terminal.png": "/static/media/terminal.e007c1f34c0da0c02981.png",
     "static/media/bash.png": "/static/media/bash.6a222cfd36143dd4d250.png",
     "static/media/fidgetFixr.png": "/static/media/fidgetFixr.52abebdc1ae26f900175.png",
@@ -16,12 +20,12 @@
     "index.html": "/index.html",
     "static/media/css.svg": "/static/media/css.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/html.svg": "/static/media/html.0107c93943a8f415b5db64ebb0a9d12d.svg",
-    "main.2c3d2ce5.css.map": "/static/css/main.2c3d2ce5.css.map",
-    "main.63d1c125.js.map": "/static/js/main.63d1c125.js.map",
+    "main.ded0fdcf.css.map": "/static/css/main.ded0fdcf.css.map",
+    "main.30bc71a6.js.map": "/static/js/main.30bc71a6.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c3d2ce5.css",
-    "static/js/main.63d1c125.js"
+    "static/css/main.ded0fdcf.css",
+    "static/js/main.30bc71a6.js"
   ]
 }
