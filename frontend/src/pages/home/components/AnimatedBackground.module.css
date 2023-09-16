@@ -1,9 +1,12 @@
-@keyframes fadeIn {
+@keyframes fader {
     0% {
         opacity: 0;
     }
-    100% {
+    50% {
         opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -15,52 +18,86 @@
     top: 0;
     left: 0;
     z-index: -100;
-    filter: blur(3px);
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    z-index: 0;
-    opacity: 0.3;
+@media screen and (min-width: 1500px){
+    .imageOne {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+    }
+    
+    .imageTwo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+    }
+    
+    .imageThree {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+    }
+    
+    .imageFour {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+    }
 }
 
-.imageOne {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
+@media screen and (max-width: 1499px) {
+    .imageOne {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 100%;
+        opacity: 0;
+    }
+    
+    .imageTwo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 100%;
+        opacity: 0;
+    }
+    
+    .imageThree {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 100%;
+        opacity: 0;
+    }
+    
+    .imageFour {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 100%;
+        opacity: 0;
+    }
 }
 
-.imageTwo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
-}
 
-.imageThree {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
-}
-
-.imageFour {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
+.currentImage {
+    animation: 12s ease-in-out 0s 1 fader;
+    animation-fill-mode: forwards;
 }
