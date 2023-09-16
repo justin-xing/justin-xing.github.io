@@ -1,3 +1,18 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 .blogWrapper {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
 }
