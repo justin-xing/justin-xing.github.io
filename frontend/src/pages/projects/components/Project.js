@@ -1,3 +1,7 @@
+import { IconButton } from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+
 import classes from "./Project.module.css";
 
 const Project = (props) => {
@@ -13,8 +17,18 @@ const Project = (props) => {
                 }}
             />
             <div className={classes.overlay}>
-                <div className={classes.title}>{props.title}</div>
-                <div className={classes.description}>{props.description}</div>
+                <div>
+                    <div className={classes.title}>{props.title}</div>
+                    <div className={classes.description}>{props.description}</div>
+                </div>
+                <div>
+                    <IconButton href={props.link} target='_blank' size='large' sx={{ color: 'white' }}>
+                        <GitHubIcon fontSize='inherit'/>
+                    </IconButton>
+                    <IconButton href={props.demoLink} target='_blank' size='large' sx={{ color: 'white' }}>
+                        <PlayCircleIcon fontSize='inherit'/>
+                    </IconButton>
+                </div>
             </div>
         </div>
     );
