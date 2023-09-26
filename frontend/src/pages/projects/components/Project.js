@@ -17,7 +17,7 @@ const Project = (props) => {
                 }}
             />
             <div className={classes.overlay}>
-                <div>
+                <div className={classes.text}>
                     <div className={classes.title}>{props.title}</div>
                     <div className={classes.description}>{props.description}</div>
                 </div>

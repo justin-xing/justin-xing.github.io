@@ -10,6 +10,12 @@
     margin-right: auto;
 }
 
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -40,13 +46,69 @@
     transform: translateY(0);
 }
 
-.title {
-    font-size: 30px;
-    font-weight: 700;
+@media screen and (min-width: 1730px) {
+    .title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    
+    .description {
+        font-size: 24px;
+        margin-top: 0.25em;
+        width: 85%;
+    }
 }
 
-.description {
-    font-size: 24px;
-    margin-top: 0.25em;
-    width: 85%;
+@media screen and (max-width: 1729px) {
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    
+    .description {
+        font-size: 18px;
+        margin-top: 0.25em;
+        width: 85%;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 1427px) {
+    .title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .description {
+        font-size: 12px;
+        margin-top: 0.25em;
+        width: 85%;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    .description {
+        font-size: 12px;
+        margin-top: 0.25em;
+        width: 85%;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }

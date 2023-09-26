@@ -11,7 +11,7 @@ const ProjectGrid = () => {
     return (
         <div className={classes.projectGridWrapper}>
             <section className={classes.projectOne}>
-                <Project type='width' img={terminalLive} title='Strategy Game Playing Algorithm' description='Ranked 2200, 60th in the world!' link='https://github.com/justin-xing' demoLink='https://terminal.c1games.com/'/>
+                <Project type='width' img={terminalLive} title='Strategy Game Playing Algorithm' description='On TERMINAL, players code algorithms that compete head-to-head, tower defense-style. This algorithm is ranked 60th in the world!' link='https://github.com/justin-xing' demoLink='https://terminal.c1games.com/'/>
             </section>
             <section className={classes.projectTwo}>
                 <Project type='width' img={bash} title='Bash Themed Website' description='An interactive bash themed website' link='https://github.com/justin-xing/Bash-Themed-Website' demoLink='https://justin-xing.github.io/Bash-Themed-Website/'/>
