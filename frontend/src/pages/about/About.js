@@ -31,7 +31,7 @@ const About = () => {
                 </div>
                 <div className={classes.description}>
                     Hey! I'm a computer science co-op student at the University
-                    of Waterloo set to graduate in 2027. As a self-taught
+                    of Waterloo set to graduate in 2026. As a self-taught
                     software developer, I pride myself on my capacity to quickly
                     learn about anything I set my eyes on, software related or
                     not. My current expertise lies within web development, but
