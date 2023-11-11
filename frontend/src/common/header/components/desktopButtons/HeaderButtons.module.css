@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.link {
+    font-weight: 700;
+    font-size: min(2vw, 20px);
+    letter-spacing: 0.2em;
+    position: relative;
+    transition: text-shadow 0.25s;
+}
+
+.link:hover {
+    text-shadow: 2px 2px #c7baba;
+}
+  

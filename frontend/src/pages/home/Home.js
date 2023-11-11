@@ -2,6 +2,7 @@ import classes from "./Home.module.css";
 import AnimatedBackground from "./components/AnimatedBackground";
 
 const Home = () => {
+
     return (
         <div className={classes.homeWrapper}>
             <AnimatedBackground/>
