@@ -25,9 +25,11 @@ const Project = (props) => {
                     <IconButton href={props.link} target='_blank' size='large' sx={{ color: 'white' }}>
                         <GitHubIcon fontSize='inherit'/>
                     </IconButton>
+                    {props.demoLink && props.demoLink !== '' &&
                     <IconButton href={props.demoLink} target='_blank' size='large' sx={{ color: 'white' }}>
                         <PlayCircleIcon fontSize='inherit'/>
                     </IconButton>
+                    }
                 </div>
             </div>
         </div>
