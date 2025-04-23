@@ -1,63 +1,85 @@
 import classes from "./About.module.css";
 
+import useImagePreloader from "../../common/hooks/useImagePreloader";
+
 import pfp from "../../assets/pfp.PNG";
 
-import htmlImage from '../../assets/stack-icons/html.svg';
-import cssImage from '../../assets/stack-icons/css.svg';
-import javascriptImage from '../../assets/stack-icons/javascript.svg';
-import reactImage from '../../assets/stack-icons/react.svg';
-import pythonImage from '../../assets/stack-icons/python.svg';
-import djangoImage from '../../assets/stack-icons/django.svg';
-import sqlImage from '../../assets/stack-icons/sql.svg';
+import { IconButton } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-import { IconButton } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+const preloadSrcList = [pfp];
 
 const About = () => {
-    return (
-        <div className={classes.aboutWrapper}>
-            <div className={classes.card}>
-                <div className={classes.imageWrapper}>
-                    <img
-                        src={pfp}
-                        alt="Justin Xing"
-                        className={classes.profileShot}
-                    />
-                </div>
-                <div className={classes.personal}>
-                    <div className={classes.name}>JUSTIN XING</div>
-                    <div className={classes.title}>Software Engineer</div>
-                </div>
-                <div className={classes.description}>
-                    Hey! I'm a computer science co-op student at the University
-                    of Waterloo set to graduate in 2026. As a self-taught
-                    software developer, I pride myself on my capacity to quickly
-                    learn about anything I set my eyes on, software related or
-                    not. My current expertise lies within web development, but
-                    I'm looking to explore other areas! Outside of dev, I love
-                    to rock climb and go on adventures with my cat.
-                </div>
-            </div>
-            <div style={{marginTop: '20px', marginBottom: '20px'}}>
-                <IconButton href='https://github.com/justin-xing' target='_blank' size='large'>
-                    <GitHubIcon fontSize='inherit'/>
-                </IconButton>
-                <IconButton href='https://www.linkedin.com/in/justinxing/' target='_blank' size='large'>
-                    <LinkedInIcon fontSize='inherit'/>
-                </IconButton>
-            </div>
-            <div className={classes.techCard}>
-                <img src={htmlImage} alt='HTML'/>
-                <img src={cssImage} alt='CSS'/>
-                <img src={javascriptImage} alt='Javascript'/>
-                <img src={reactImage} alt='React'/>
-                <img src={pythonImage} alt='Python'/>
-                <img src={djangoImage} alt='Django'/>
-                <img src={sqlImage} alt='SQL'/>
-            </div>
+  const { imagesPreloaded } = useImagePreloader(preloadSrcList);
+
+  return (
+    <div className={classes.aboutWrapper}>
+      <div className={classes.card}>
+        <div className={classes.imageWrapper}>
+          <img
+            src={imagesPreloaded ? pfp : undefined}
+            alt="Justin Xing"
+            className={classes.profileShot}
+          />
         </div>
-    );
+        <div className={classes.personal}>
+          <h2 className={classes.name}>JUSTIN XING</h2>
+          <h3 className={classes.title}>Software Engineer</h3>
+        </div>
+        <div className={classes.description}>
+          <p>
+            I'm a computer science student at the{" "}
+            <b>
+              <span className={classes.goldOutline}>
+                University of Waterloo
+              </span>
+            </b>{" "}
+            set to graduate in 2027.
+          </p>
+          <ul>
+            <li>
+              Currently interning at{" "}
+              <b>
+                <span className={classes.limeOutline}>Google</span>
+              </b>
+              , working on <b>YouTube</b>
+            </li>
+            <li>
+              Previously at:
+              <ul>
+                <li>
+                  <b>Government of Canada</b>
+                </li>
+                <li>
+                  <b>Qualifacts</b>
+                </li>
+                <li>
+                  <b>Canada Post</b>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div style={{ marginTop: "20px", marginBottom: "20px" }}>
+        <IconButton
+          href="https://github.com/justin-xing"
+          target="_blank"
+          size="large"
+        >
+          <GitHubIcon fontSize="inherit" />
+        </IconButton>
+        <IconButton
+          href="https://www.linkedin.com/in/justinxing/"
+          target="_blank"
+          size="large"
+        >
+          <LinkedInIcon fontSize="inherit" />
+        </IconButton>
+      </div>
+    </div>
+  );
 };
 
 export default About;
