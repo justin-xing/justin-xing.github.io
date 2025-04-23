@@ -1,12 +1,3 @@
-@keyframes fadeIn {
-    0% {
-        opacity: 50%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
 .projectsWrapper {
     min-height: 100vh;
     display: flex;
