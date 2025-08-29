@@ -17,8 +17,7 @@
 
 @media screen and (max-width: 699px) {
   .labelText {
-    color: transparent;
-    font-size: 0;
+    display: none;
   }
 }
 

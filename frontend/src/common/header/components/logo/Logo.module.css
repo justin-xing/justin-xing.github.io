@@ -5,22 +5,18 @@
   position: relative;
 }
 
-@keyframes strike {
-  0% {width: 0;}
-  100% {width: 100%;}
-}
-
-.logo:hover::after {
+.logo::after {
   content: ' ';
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
+  left: -5px;
+  width: 0;
   height: 2px;
   background: black;
-  animation-name: strike;
-  animation-duration: 0.3s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards; 
+  transition: width 0.1s linear;
+}
+
+.logo:hover::after {
+  width: 100%;
+  transition: width 0.2s linear;
 }
