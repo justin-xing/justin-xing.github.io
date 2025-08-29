@@ -43,7 +43,7 @@
     
     .imageThree {
         position: absolute;
-        top: 0;
+        top: -10%;
         left: 0;
         width: 100%;
         height: auto;
@@ -81,8 +81,8 @@
     
     .imageThree {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -10%;
+        right: 0;
         width: auto;
         height: 100%;
         opacity: 0;
@@ -91,7 +91,7 @@
     .imageFour {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         width: auto;
         height: 100%;
         opacity: 0;
