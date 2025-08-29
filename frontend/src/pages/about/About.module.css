@@ -76,7 +76,7 @@
 
   .title {
     font-size: 15px;
-    font-weight: normal;
+    font-weight: bold;
     letter-spacing: 0.1em;
     margin: 0;
   }
@@ -107,6 +107,9 @@
   .description {
     padding-left: 15vw;
     padding-right: 15vw;
+  }
+  .personal {
+    margin-bottom: 10px;
   }
 }
 
