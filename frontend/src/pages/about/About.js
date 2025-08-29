@@ -61,7 +61,7 @@ const About = () => {
           </ul>
         </div>
       </div>
-      <div style={{ marginTop: "20px", marginBottom: "20px" }}>
+      <div className={classes.iconBar}>
         <IconButton
           href="https://github.com/justin-xing"
           target="_blank"
