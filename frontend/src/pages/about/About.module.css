@@ -108,9 +108,6 @@
     padding-left: 15vw;
     padding-right: 15vw;
   }
-  .personal {
-    margin-bottom: 10px;
-  }
 }
 
 @media screen and (min-width: 800px) {
