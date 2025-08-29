@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.eea7edf7.css",
-    "main.js": "/static/js/main.09ed6bcc.js",
+    "main.css": "/static/css/main.4498e22d.css",
+    "main.js": "/static/js/main.3e424c74.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
-    "static/media/pfp.PNG": "/static/media/pfp.c6c27472fa1ce44cd758.PNG",
-    "static/media/busan.jpg": "/static/media/busan.16ed9a29c623f36d6236.jpg",
     "static/media/jeju.jpg": "/static/media/jeju.456b89195f61f69340ce.jpg",
-    "static/media/niagara.jpg": "/static/media/niagara.f5002dd74c0b7ff63209.jpg",
     "static/media/subway.png": "/static/media/subway.649d755f782ad0b94eeb.png",
+    "static/media/california.jpg": "/static/media/california.dfd7dc0b86bf54706c6d.jpg",
+    "static/media/japan.jpg": "/static/media/japan.b5c818ec4d4f4e9156ad.jpg",
     "static/media/plane.jpg": "/static/media/plane.4e746b9932e9c19bb264.jpg",
-    "static/media/Resume.pdf": "/static/media/Resume.05a824cb41ecc5889eab.pdf",
+    "static/media/pfp.JPG": "/static/media/pfp.34fd8eabd3526d750844.JPG",
     "static/media/terminal.png": "/static/media/terminal.e007c1f34c0da0c02981.png",
+    "static/media/Resume.pdf": "/static/media/Resume.4c361dc28b55d25c6418.pdf",
     "static/media/bash.png": "/static/media/bash.6a222cfd36143dd4d250.png",
     "static/media/bot.png": "/static/media/bot.c1431bfc7d209cef4f5b.png",
     "index.html": "/index.html",
-    "main.eea7edf7.css.map": "/static/css/main.eea7edf7.css.map",
-    "main.09ed6bcc.js.map": "/static/js/main.09ed6bcc.js.map",
+    "main.4498e22d.css.map": "/static/css/main.4498e22d.css.map",
+    "main.3e424c74.js.map": "/static/js/main.3e424c74.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eea7edf7.css",
-    "static/js/main.09ed6bcc.js"
+    "static/css/main.4498e22d.css",
+    "static/js/main.3e424c74.js"
   ]
 }
