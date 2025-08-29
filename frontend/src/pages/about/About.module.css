@@ -9,8 +9,18 @@
 }
 
 .redOutline {
-  text-shadow: -0.5px -0.5px 0 #ff6961, 0.5px -0.5px 0 #ff6961,
-    -0.5px 0.5px 0 #ff6961, 0.5px 0.5px 0 #ff6961;
+  text-shadow: -0.5px -0.5px 0 #ffb3b3, 0.5px -0.5px 0 #ffb3b3,
+    -0.5px 0.5px 0 #ffb3b3, 0.5px 0.5px 0 #ffb3b3;
+}
+
+.blueOutline {
+  text-shadow: -0.5px -0.5px 0 #b3daff, 0.5px -0.5px 0 #b3daff,
+    -0.5px 0.5px 0 #b3daff, 0.5px 0.5px 0 #b3daff;
+}
+
+.purpleOutline {
+  text-shadow: -0.5px -0.5px 0 #e0b3ff, 0.5px -0.5px 0 #e0b3ff,
+    -0.5px 0.5px 0 #e0b3ff, 0.5px 0.5px 0 #e0b3ff;
 }
 
 .aboutWrapper {
@@ -22,6 +32,10 @@
   align-items: center;
   padding-top: 60px;
   animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
+  img {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .card {
@@ -83,6 +97,10 @@
   }
   .name {
     text-align: center;
+  }
+  .description {
+    padding-left: 15vw;
+    padding-right: 15vw;
   }
 }
 

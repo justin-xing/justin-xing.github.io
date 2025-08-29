@@ -2,7 +2,7 @@ import classes from "./About.module.css";
 
 import useImagePreloader from "../../common/hooks/useImagePreloader";
 
-import pfp from "../../assets/pfp.PNG";
+import pfp from "../../assets/pfp.JPG";
 
 import { IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -35,27 +35,26 @@ const About = () => {
                 University of Waterloo
               </span>
             </b>{" "}
-            set to graduate in 2027.
+            set to graduate in April 2027.
           </p>
           <ul>
             <li>
-              Currently interning at{" "}
-              <b>
-                <span className={classes.limeOutline}>Google</span>
-              </b>
-              , working on <b>YouTube</b>
+              Currently on a study term for Fall 2025
             </li>
             <li>
               Previously at:
               <ul>
                 <li>
-                  <b>Government of Canada</b>
+                  <b className={classes.limeOutline}>Google</b>
                 </li>
                 <li>
-                  <b>Qualifacts</b>
+                  <b className={classes.blueOutline}>Government of Canada</b>
                 </li>
                 <li>
-                  <b>Canada Post</b>
+                  <b className={classes.purpleOutline}>Qualifacts</b>
+                </li>
+                <li>
+                  <b className={classes.redOutline}>Canada Post</b>
                 </li>
               </ul>
             </li>
