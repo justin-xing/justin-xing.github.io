@@ -56,18 +56,12 @@
 }
 
 .imageWrapper {
-  width: 180px;
-  height: 230px;
+  width: 150px;
+  height: 150px;
   border-style: solid;
   border-color: black;
   border-width: 1px;
   overflow: hidden;
-}
-
-.profileShot {
-  height: 400px;
-  width: auto;
-  margin-left: -40px;
 }
 
 .personal {
@@ -117,7 +111,7 @@
     display: grid;
     gap: 20px 40px;
     grid-template-rows: 38px 196px 1fr;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 160px 1fr;
   }
   .imageWrapper {
     grid-row: 1 / 2;
