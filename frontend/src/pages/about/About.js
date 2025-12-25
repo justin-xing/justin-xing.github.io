@@ -29,36 +29,33 @@ const About = () => {
         </div>
         <div className={classes.description}>
           <p>
-            I'm a computer science student at the{" "}
+            I am a 4th year computer science undergraduate at the{" "}
             <b>
               <span className={classes.goldOutline}>
                 University of Waterloo
               </span>
-            </b>{" "}
-            set to graduate in April 2027.
+            </b>
+            .
           </p>
-          <ul>
-            <li>
-              Currently on a study term for Fall 2025
-            </li>
-            <li>
-              Previously at:
-              <ul>
-                <li>
-                  <b className={classes.limeOutline}>Google</b>
-                </li>
-                <li>
-                  <b className={classes.blueOutline}>Government of Canada</b>
-                </li>
-                <li>
-                  <b className={classes.purpleOutline}>Qualifacts</b>
-                </li>
-                <li>
-                  <b className={classes.redOutline}>Canada Post</b>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <p>
+            My current technical interests include distributed systems and
+            machine learning.
+          </p>
+          <p>
+            I am not interested in work which prioritizes select individuals
+            over the general populus.
+          </p>
+          <p>
+            I will be interning at{" "}
+            <b className={classes.databricksOutline}>Databricks</b> for Winter
+            2026. I previously interned at a variety of wonderful organizations:
+          </p>
+          <p>
+            <b className={classes.limeOutline}>Google</b>,{" "}
+            <b className={classes.blueOutline}>Government of Canada</b>,{" "}
+            <b className={classes.purpleOutline}>Qualifacts</b>,{" "}
+            <b className={classes.redOutline}>Canada Post</b>
+          </p>
         </div>
       </div>
       <div className={classes.iconBar}>
