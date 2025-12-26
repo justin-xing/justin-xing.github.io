@@ -6,5 +6,4 @@
   align-items: center;
   box-sizing: border-box;
   gap: 10px;
-  animation: 1s cubic-bezier(0.1, -0.6, 0.2, 0) 0s 1 fadeIn;
 }
