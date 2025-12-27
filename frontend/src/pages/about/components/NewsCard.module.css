@@ -1,0 +1,30 @@
+.newsCard {
+  background-color: white;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: large;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+.content {
+  font-size: x-small;
+  padding-left: 0;
+}
+
+@media screen and (width < 1100px) {
+  .newsCard {
+    width: 90vw;
+  }
+}
+
+@media screen and (width >= 1100px) {
+  .newsCard {
+    width: 320px;
+  }
+}
+
