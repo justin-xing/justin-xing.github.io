@@ -37,9 +37,9 @@ const AboutCard = () => {
           the general populus.
         </p>
         <p>
-          I will be interning at{" "}
-          <b className={classes.databricksOutline}>Databricks</b> for Winter
-          2026. I previously interned at a variety of wonderful organizations:
+          I am currently interning at{" "}
+          <b className={classes.databricksOutline}>Databricks</b>. I previously
+          interned at a variety of wonderful organizations:
         </p>
         <p>
           <b className={classes.limeOutline}>Google</b>,{" "}

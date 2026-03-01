@@ -4,8 +4,27 @@ const KANJI_GARDEN_LINK = "https://www.kanjigarden.xyz/";
 const UWATERLOO_NEWS_LINK =
   "https://uwaterloo.ca/news/mathematics/how-waterloos-future-work-institute-unlocking-human-learning-ai";
 const FUTURES_LAB_LINK = "https://uwfutureslab.ca/";
+const GOOGLE_FLOW_LINK = "https://labs.google/flow";
 
 const NEWS_ENTRIES = [
+  {
+    date: "01/23/26",
+    content: (
+      <>
+        I will returning to Google in Summer 2026 for an internship at Google
+        Labs, working on{" "}
+        <a href={GOOGLE_FLOW_LINK} target="_blank" rel="noreferrer">
+          Flow
+        </a>
+        .
+      </>
+    ),
+  },
+  {
+    date: "01/12/26",
+    content:
+      "I started my internship at Databricks under the Exploratory Data Analysis team.",
+  },
   {
     date: "12/18/25",
     content: (
