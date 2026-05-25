@@ -38,11 +38,12 @@ const AboutCard = () => {
         </p>
         <p>
           I am currently interning at{" "}
-          <b className={classes.databricksOutline}>Databricks</b>. I previously
+          <b className={classes.limeOutline}>Google Labs</b>. I previously
           interned at a variety of wonderful organizations:
         </p>
         <p>
-          <b className={classes.limeOutline}>Google</b>,{" "}
+          <b className={classes.databricksOutline}>Databricks</b>,{" "}
+          <b className={classes.limeOutline}>Google (YouTube)</b>,{" "}
           <b className={classes.blueOutline}>Government of Canada</b>,{" "}
           <b className={classes.purpleOutline}>Qualifacts</b>,{" "}
           <b className={classes.redOutline}>Canada Post</b>

@@ -8,6 +8,14 @@ const GOOGLE_FLOW_LINK = "https://labs.google/flow";
 
 const NEWS_ENTRIES = [
   {
+    date: "05/18/26",
+    content: <>I started my internship at Google Labs in Mountain View, CA.</>,
+  },
+  {
+    date: "05/01/26",
+    content: <>I concluded my internship at Databricks.</>,
+  },
+  {
     date: "01/23/26",
     content: (
       <>
@@ -23,7 +31,7 @@ const NEWS_ENTRIES = [
   {
     date: "01/12/26",
     content:
-      "I started my internship at Databricks under the Exploratory Data Analysis team.",
+      "I started my internship at Databricks under the notebooks team in San Francisco, CA.",
   },
   {
     date: "12/18/25",
@@ -77,7 +85,8 @@ const NEWS_ENTRIES = [
   },
   {
     date: "5/5/25",
-    content: "I began my internship at Google to work on YouTube.",
+    content:
+      "I began my internship at Google to work on YouTube in San Bruno, CA.",
   },
   {
     date: "3/18/25",
