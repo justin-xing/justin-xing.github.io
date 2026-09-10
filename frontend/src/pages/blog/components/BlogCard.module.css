@@ -50,16 +50,88 @@
   max-height: 180px;
 }
 
+/* Markdown output from react-markdown. Normal flow rather than flex, so
+   element margins control the rhythm; first/last are zeroed so the block sits
+   flush inside the card. */
 .content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   letter-spacing: 0.05em;
   text-align: justify;
 }
 
+.content > *:first-child {
+  margin-top: 0;
+}
+
+.content > *:last-child {
+  margin-bottom: 0;
+}
+
 .content p {
-  margin: 0;
+  margin: 0 0 10px;
+}
+
+.content h2,
+.content h3 {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 25px 0 10px;
+}
+
+.content a {
+  color: black;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.content ul,
+.content ol {
+  margin: 0 0 10px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.content li {
+  margin-bottom: 4px;
+}
+
+.content code {
+  font-size: 0.9em;
+  background-color: #f5f5f5;
+  padding: 1px 5px;
+}
+
+.content pre {
+  background-color: #f5f5f5;
+  padding: 15px;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.content pre code {
+  background: none;
+  padding: 0;
+}
+
+.content blockquote {
+  margin: 10px 0;
+  padding-left: 15px;
+  border-left: 2px solid lightgrey;
+  color: #6c6c6c;
+  text-align: left;
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid lightgrey;
+  margin: 20px 0;
 }
 
 /* rgba(255,255,255,0) rather than `transparent`: Safari interpolates
