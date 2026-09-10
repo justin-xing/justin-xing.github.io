@@ -8,6 +8,19 @@ const GOOGLE_FLOW_LINK = "https://labs.google/flow";
 
 const NEWS_ENTRIES = [
   {
+    date: "08/21/26",
+    content: <>I concluded my internship at Google Labs.</>,
+  },
+  {
+    date: "06/02/26",
+    content: (
+      <>
+        I reached top 100 in the world on the Pokemon Showdown random battles
+        ladder!!!
+      </>
+    ),
+  },
+  {
     date: "05/18/26",
     content: <>I started my internship at Google Labs in Mountain View, CA.</>,
   },
