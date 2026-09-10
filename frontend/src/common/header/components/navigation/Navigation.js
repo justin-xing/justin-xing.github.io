@@ -29,7 +29,7 @@ const Navigation = (props) => {
             setPath("ABOUT");
         } else if (locationPath === "/projects") {
             setPath("PROJECTS");
-        } else if (locationPath === "/blog") {
+        } else if (locationPath.startsWith("/blog")) {
             setPath("BLOG");
         }
     }, [locationPath]);

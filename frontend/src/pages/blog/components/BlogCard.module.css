@@ -1,0 +1,125 @@
+.card {
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.25s;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.title {
+  font-size: large;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.date {
+  font-size: 12px;
+  color: #6c6c6c;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+.divider {
+  height: 1px;
+  background-color: lightgrey;
+  margin: 20px 0;
+}
+
+.preview {
+  position: relative;
+  overflow: hidden;
+  max-height: 180px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  letter-spacing: 0.05em;
+  text-align: justify;
+}
+
+.content p {
+  margin: 0;
+}
+
+/* rgba(255,255,255,0) rather than `transparent`: Safari interpolates
+   `transparent` as transparent-black and smears the gradient grey. */
+.fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+/* The whole card is the link, so the underline wipe keys off the card hover.
+   Same device as the logo in common/header/components/logo/Logo.module.css */
+.more {
+  align-self: flex-start;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: black;
+  position: relative;
+}
+
+.more::after {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: black;
+  transition: width 0.2s linear;
+}
+
+.card:hover .more::after {
+  width: 100%;
+}
+
+@media screen and (width >= 1100px) {
+  .card {
+    width: 800px;
+    padding: 40px;
+  }
+}
+
+@media screen and (width < 1100px) {
+  .card {
+    width: 90vw;
+    padding: 25px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .header {
+    gap: 15px;
+  }
+}
