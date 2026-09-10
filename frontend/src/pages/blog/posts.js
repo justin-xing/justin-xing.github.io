@@ -20,7 +20,7 @@ import googleplex from "../../assets/blog-images/googleplex.webp";
 export const POSTS = [
   {
     id: "recruiting-for-big-tech",
-    icon: "⌛",
+    icon: "🧑‍💻",
     title: "Recruiting for big tech",
     date: "09/10/26",
     body: `
