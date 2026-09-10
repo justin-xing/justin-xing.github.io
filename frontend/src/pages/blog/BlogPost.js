@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import Markdown from "react-markdown";
 
 import classes from "./BlogPost.module.css";
 import { getPostById } from "./posts";
@@ -54,9 +55,7 @@ const BlogPost = () => {
         </div>
         <div className={classes.divider} />
         <div className={classes.content}>
-          {post.body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+          <Markdown>{post.body}</Markdown>
         </div>
       </article>
     </main>

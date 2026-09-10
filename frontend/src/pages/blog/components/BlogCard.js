@@ -1,9 +1,15 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import Markdown from "react-markdown";
 
 import classes from "./BlogCard.module.css";
 
 const PREVIEW_HEIGHT = 180;
+
+// The whole card is already a link, so a Markdown link in the preview would
+// nest <a> inside <a> — invalid HTML, and a click target competing with the
+// card's own. Render preview links as plain text; the real post keeps them.
+const PREVIEW_COMPONENTS = { a: ({ children }) => <span>{children}</span> };
 
 const BlogCard = ({ id, icon, title, date, body }) => {
   const [clipped, setClipped] = useState(false);
@@ -40,9 +46,7 @@ const BlogCard = ({ id, icon, title, date, body }) => {
       <div className={classes.divider} />
       <div className={classes.preview}>
         <div ref={contentRef} className={classes.content}>
-          {body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+          <Markdown components={PREVIEW_COMPONENTS}>{body}</Markdown>
         </div>
         {clipped && <div className={classes.fade} />}
       </div>
