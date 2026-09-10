@@ -1,4 +1,4 @@
-import pfp from "../../../assets/pfp.JPG";
+import pfp from "../../../assets/pfp.jpg";
 import useImagePreloader from "../../../common/hooks/useImagePreloader";
 
 import classes from "./AboutCard.module.css";
