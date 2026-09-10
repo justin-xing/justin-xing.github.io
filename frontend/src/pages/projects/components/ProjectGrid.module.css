@@ -13,12 +13,12 @@
 }
 
 @media screen and (min-width: 1000px) {
-    section {
+    .projectGridWrapper section {
         box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.37);
         transition: box-shadow 0.25s;
     }
 
-    section:hover {
+    .projectGridWrapper section:hover {
         box-shadow: 5px 5px 15px 10px rgba(0, 0, 0, 0.37);
     }
 
