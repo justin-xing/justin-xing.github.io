@@ -1,10 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* Theme tokens. Light is the base; dark is applied either by the OS
+   preference (unless the visitor has explicitly chosen light) or by the
+   data-theme attribute that the toggle and the boot script in index.html set.
+
+   --surface-rgb exists alongside --surface because the blog preview fade needs
+   a fully transparent version of the surface colour, and `transparent` is
+   interpolated as transparent-black by Safari, which smears the gradient. */
+:root {
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --surface-rgb: 255, 255, 255;
+  --text: #000000;
+  --text-muted: #6c6c6c;
+  --border: #d3d3d3;
+  --shadow: rgba(0, 0, 0, 0.37);
+  --shadow-soft: rgba(0, 0, 0, 0.15);
+  --nav-hover: #c7baba;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #e2dede;
+  --scrollbar-thumb-hover: #d4cece;
+  --code-bg: #f5f5f5;
+  --link: #0645ad;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121212;
+    --surface: #1c1c1c;
+    --surface-rgb: 28, 28, 28;
+    --text: #ededed;
+    --text-muted: #9e9e9e;
+    --border: #333333;
+    --shadow: rgba(0, 0, 0, 0.6);
+    --shadow-soft: rgba(0, 0, 0, 0.5);
+    --nav-hover: #4f4f4f;
+    --scrollbar-track: #1c1c1c;
+    --scrollbar-thumb: #3a3a3a;
+    --scrollbar-thumb-hover: #4a4a4a;
+    --code-bg: #2a2a2a;
+    --link: #8ab4f8;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1c1c1c;
+  --surface-rgb: 28, 28, 28;
+  --text: #ededed;
+  --text-muted: #9e9e9e;
+  --border: #333333;
+  --shadow: rgba(0, 0, 0, 0.6);
+  --shadow-soft: rgba(0, 0, 0, 0.5);
+  --nav-hover: #4f4f4f;
+  --scrollbar-track: #1c1c1c;
+  --scrollbar-thumb: #3a3a3a;
+  --scrollbar-thumb-hover: #4a4a4a;
+  --code-bg: #2a2a2a;
+  --link: #8ab4f8;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Links with no component styling of their own (e.g. the news list) would
+   otherwise fall back to the browser's default blue, which is unreadable on a
+   dark ground. */
+a {
+  color: var(--link);
 }
 
 code {
@@ -16,18 +85,18 @@ code {
 ::-webkit-scrollbar {
     width: 6px;
   }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--scrollbar-track);
  }
-  
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #e2dede;
+    background: var(--scrollbar-thumb);
 }
-  
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #d4cece;
+    background: var(--scrollbar-thumb-hover);
 }

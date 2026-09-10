@@ -4,10 +4,10 @@
         width: 97vw;
         position: fixed;
         z-index: 99999;
-        background-color: white;
+        background-color: var(--surface);
         border-bottom-style: solid;
         border-bottom-width: 1px;
-        border-bottom-color: lightgrey;
+        border-bottom-color: var(--border);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -21,10 +21,10 @@
         width: 95vw;
         position: fixed;
         z-index: 99999;
-        background-color: white;
+        background-color: var(--surface);
         border-bottom-style: solid;
         border-bottom-width: 1px;
-        border-bottom-color: lightgrey;
+        border-bottom-color: var(--border);
         display: flex;
         justify-content: space-between;
         align-items: center;

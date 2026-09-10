@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 
 import classes from './Header.module.css';
 import HeaderButtons from "./components/desktopButtons/HeaderButtons";
+import ThemeToggle from "./components/theme/ThemeToggle";
 
 const Header = () => {
   return (
@@ -16,7 +17,10 @@ const Header = () => {
         <Box sx={{ display: { xs: 'none', md: 'block' }}}>
             <HeaderButtons/>
         </Box>
-            <ResumeButton className={classes.headerRight}/>
+            <div className={classes.headerRight}>
+                <ThemeToggle/>
+                <ResumeButton/>
+            </div>
     </div>
   );
 }
