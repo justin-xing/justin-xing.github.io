@@ -9,6 +9,18 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Justin's Space</title>
+    <!--
+      Puts the URL back after a 404.html redirect (see public/404.html).
+      Must stay ABOVE the Google Analytics tag below, which reads location on
+      init and would otherwise report the wrong page path.
+    -->
+    <script>
+      var redirect = sessionStorage.redirect;
+      if (redirect) {
+        delete sessionStorage.redirect;
+        history.replaceState(null, "", redirect);
+      }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script
       async

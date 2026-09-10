@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Justin's Space</title>
+    <!--
+      GitHub Pages serves this for any path it cannot resolve. The site is a
+      single-page app, so a deep link like /blog/my-post has no matching file
+      and would otherwise show GitHub's 404 page before React ever loads.
+
+      Stash where the visitor was going, then go to root; a snippet in
+      index.html puts the URL back before the app boots.
+    -->
+    <script>
+      sessionStorage.redirect = location.pathname + location.search + location.hash;
+      location.replace("/");
+    </script>
+  </head>
+  <body></body>
+</html>
