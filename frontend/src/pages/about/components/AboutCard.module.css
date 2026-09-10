@@ -1,6 +1,6 @@
 .aboutCard {
   box-sizing: border-box;
-  background-color: white;
+  background-color: var(--surface);
   padding: 40px;
   height: fit-content;
 }
@@ -35,7 +35,7 @@
   width: 150px;
   height: 150px;
   border-style: solid;
-  border-color: black;
+  border-color: var(--text);
   border-width: 1px;
   overflow: hidden;
   img {
@@ -72,6 +72,68 @@
 .databricksOutline {
   text-shadow: -0.3px -0.3px 0 #ee3e30, 0.3px -0.3px 0 #ee3e30,
     -0.3px 0.3px 0 #ee3e30, 0.3px 0.3px 0 #ee3e30;
+}
+
+/* The keyline trick relies on a dark glyph. In dark mode colour the word
+   itself instead. */
+
+:root[data-theme="dark"] .goldOutline {
+  color: gold;
+  text-shadow: none;
+}
+
+:root[data-theme="dark"] .limeOutline {
+  color: lime;
+  text-shadow: none;
+}
+
+:root[data-theme="dark"] .redOutline {
+  color: #ffb3b3;
+  text-shadow: none;
+}
+
+:root[data-theme="dark"] .blueOutline {
+  color: #b3daff;
+  text-shadow: none;
+}
+
+:root[data-theme="dark"] .purpleOutline {
+  color: #e0b3ff;
+  text-shadow: none;
+}
+
+:root[data-theme="dark"] .databricksOutline {
+  /* The exact brand red is 4.36:1 on the dark surface, just under AA.
+     Lightened 10% along the same hue to clear 4.5:1. */
+  color: #f05145;
+  text-shadow: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .goldOutline {
+    color: gold;
+    text-shadow: none;
+  }
+  :root:not([data-theme="light"]) .limeOutline {
+    color: lime;
+    text-shadow: none;
+  }
+  :root:not([data-theme="light"]) .redOutline {
+    color: #ffb3b3;
+    text-shadow: none;
+  }
+  :root:not([data-theme="light"]) .blueOutline {
+    color: #b3daff;
+    text-shadow: none;
+  }
+  :root:not([data-theme="light"]) .purpleOutline {
+    color: #e0b3ff;
+    text-shadow: none;
+  }
+  :root:not([data-theme="light"]) .databricksOutline {
+    color: #f05145;
+    text-shadow: none;
+  }
 }
 
 @media screen and (width < 1100px) {

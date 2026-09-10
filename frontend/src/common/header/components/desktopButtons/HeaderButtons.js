@@ -6,13 +6,13 @@ const HeaderButtons = () => {
     return (
         <div className={classes.wrapper}>
             <div className={classes.link}>
-                <Link to='/about' style={{textDecoration: 'none', color: 'black'}}>ABOUT</Link>
+                <Link to='/about' style={{textDecoration: 'none', color: 'var(--text)'}}>ABOUT</Link>
             </div>
             <div className={classes.link}>
-                <Link to='/projects' style={{textDecoration: 'none', color: 'black'}}>PROJECTS</Link>
+                <Link to='/projects' style={{textDecoration: 'none', color: 'var(--text)'}}>PROJECTS</Link>
             </div>
             <div className={classes.link}>
-                <Link to='/blog' style={{textDecoration: 'none', color: 'black'}}>BLOG</Link>
+                <Link to='/blog' style={{textDecoration: 'none', color: 'var(--text)'}}>BLOG</Link>
             </div>
         </div>
     )

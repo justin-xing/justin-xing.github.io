@@ -1,5 +1,5 @@
 .card {
-  background-color: white;
+  background-color: var(--surface);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 }
 
 .card:hover {
-  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 15px 0px var(--shadow-soft);
 }
 
 .header {
@@ -33,14 +33,14 @@
 
 .date {
   font-size: 12px;
-  color: #6c6c6c;
+  color: var(--text-muted);
   letter-spacing: 0.1em;
   margin-top: 4px;
 }
 
 .divider {
   height: 1px;
-  background-color: lightgrey;
+  background-color: var(--border);
   margin: 20px 0;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .content a {
-  color: black;
+  color: var(--text);
 }
 
 .content img {
@@ -103,12 +103,12 @@
 
 .content code {
   font-size: 0.9em;
-  background-color: #f5f5f5;
+  background-color: var(--code-bg);
   padding: 1px 5px;
 }
 
 .content pre {
-  background-color: #f5f5f5;
+  background-color: var(--code-bg);
   padding: 15px;
   overflow-x: auto;
   text-align: left;
@@ -122,26 +122,30 @@
 .content blockquote {
   margin: 10px 0;
   padding-left: 15px;
-  border-left: 2px solid lightgrey;
-  color: #6c6c6c;
+  border-left: 2px solid var(--border);
+  color: var(--text-muted);
   text-align: left;
 }
 
 .content hr {
   border: none;
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid var(--border);
   margin: 20px 0;
 }
 
 /* rgba(255,255,255,0) rather than `transparent`: Safari interpolates
-   `transparent` as transparent-black and smears the gradient grey. */
+   `transparent` as transparent-var(--text) and smears the gradient grey. */
 .fade {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 90px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--surface-rgb), 0),
+    rgb(var(--surface-rgb))
+  );
   pointer-events: none;
   transition: opacity 0.25s;
 }
@@ -154,7 +158,7 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: black;
+  color: var(--text);
   position: relative;
 }
 
@@ -165,7 +169,7 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: black;
+  background: var(--text);
   transition: width 0.2s linear;
 }
 

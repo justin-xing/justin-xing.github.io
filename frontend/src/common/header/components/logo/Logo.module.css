@@ -12,7 +12,7 @@
   left: -5px;
   width: 0;
   height: 2px;
-  background: black;
+  background: var(--text);
   transition: width 0.2s linear;
 }
 

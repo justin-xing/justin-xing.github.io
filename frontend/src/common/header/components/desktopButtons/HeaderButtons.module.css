@@ -12,6 +12,6 @@
 }
 
 .link:hover {
-    text-shadow: 2px 2px #c7baba;
+    text-shadow: 2px 2px var(--nav-hover);
 }
   

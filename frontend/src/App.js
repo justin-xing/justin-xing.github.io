@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useSelector } from "react-redux";
 
 import { Provider } from "react-redux";
 import store from "./store/index";
@@ -11,6 +13,17 @@ import About from "./pages/about/About";
 import Projects from "./pages/projects/Projects";
 import Blog from "./pages/blog/Blog";
 import BlogPost from "./pages/blog/BlogPost";
+// MUI components (Drawer, IconButton, Button) come from the default light
+// theme unless told otherwise, so keep its palette in step with ours.
+const Themed = ({ children }) => {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+  const theme = useMemo(
+    () => createTheme({ palette: { mode: darkMode ? "dark" : "light" } }),
+    [darkMode]
+  );
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+};
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -29,7 +42,9 @@ function App() {
 
   return (
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <Themed>
+        <RouterProvider router={router} />
+      </Themed>
     </Provider>
   );
 }

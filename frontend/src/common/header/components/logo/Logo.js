@@ -5,7 +5,7 @@ import classes from "./Logo.module.css";
 const Logo = () => {
   return (
     <div className={classes.logo}>
-      <Link to='/' style={{textDecoration: 'none', color: 'black'}}>JUSTIN XING</Link>
+      <Link to='/' style={{textDecoration: 'none', color: 'var(--text)'}}>JUSTIN XING</Link>
     </div>
   );
 };

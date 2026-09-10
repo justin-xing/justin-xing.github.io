@@ -14,12 +14,12 @@
 
 @media screen and (min-width: 1000px) {
     .projectGridWrapper section {
-        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.37);
+        box-shadow: 5px 5px 15px 0px var(--shadow);
         transition: box-shadow 0.25s;
     }
 
     .projectGridWrapper section:hover {
-        box-shadow: 5px 5px 15px 10px rgba(0, 0, 0, 0.37);
+        box-shadow: 5px 5px 15px 10px var(--shadow);
     }
 
     .projectGridWrapper {
@@ -29,7 +29,7 @@
         gap: 10px;
         width: 60vw;
         height: 35vw;
-        background-color: white;
+        background-color: var(--surface);
         padding: 30px;
     }
 

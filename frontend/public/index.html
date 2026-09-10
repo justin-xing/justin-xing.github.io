@@ -10,6 +10,28 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Justin's Space</title>
     <!--
+      Set the theme before first paint, so a dark-mode visitor never sees a
+      white flash. Runs synchronously and deliberately ahead of the app bundle.
+      Mirrors the logic in src/store/darkMode.js.
+    -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var dark =
+            saved === "dark" ||
+            (saved === null &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.setAttribute(
+            "data-theme",
+            dark ? "dark" : "light"
+          );
+        } catch (e) {
+          /* storage blocked; fall back to the CSS media query */
+        }
+      })();
+    </script>
+    <!--
       Puts the URL back after a 404.html redirect (see public/404.html).
       Must stay ABOVE the Google Analytics tag below, which reads location on
       init and would otherwise report the wrong page path.
