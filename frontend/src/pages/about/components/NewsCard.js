@@ -8,6 +8,16 @@ const GOOGLE_FLOW_LINK = "https://labs.google/flow";
 
 const NEWS_ENTRIES = [
   {
+    date: "09/30/26",
+    content: (
+      <>
+        I started as an undergraduate research assistant under Khuzaima Daudjee,
+        during which I will be investigating resource orchestration for
+        serverless systems.
+      </>
+    ),
+  },
+  {
     date: "08/21/26",
     content: <>I concluded my internship at Google Labs.</>,
   },
