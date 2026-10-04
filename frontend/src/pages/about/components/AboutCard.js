@@ -29,8 +29,15 @@ const AboutCard = () => {
           .
         </p>
         <p>
-          My current technical interests include distributed systems and machine
+          My technical interests include distributed systems and machine
           learning.
+        </p>
+        <p>
+          I am currently an{" "}
+          <span className={classes.goldOutline}>
+            undergraduate research assistant
+          </span>
+          , investigating resource allocation for serverless systems.
         </p>
         <p>I previously interned at a variety of wonderful organizations:</p>
         <p>
