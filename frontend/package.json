@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "grep -qs '^REACT_APP_POSTS_URL=.' .env || { echo 'frontend/.env needs REACT_APP_POSTS_URL (see backend/README.md)'; exit 1; } && npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
