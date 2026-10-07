@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Holds REACT_APP_POSTS_URL; read at build time, never committed
+.env

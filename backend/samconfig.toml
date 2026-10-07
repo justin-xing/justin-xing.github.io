@@ -1,0 +1,14 @@
+version = 0.1
+
+[default.deploy.parameters]
+stack_name = "blog-backend"
+resolve_s3 = true
+s3_prefix = "blog-backend"
+region = "us-east-2"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "NotionDatabaseId=\"3de315dffa1b80c2b4b3fd33a7be43c5\""
+image_repositories = []
+
+[default.global.parameters]
+region = "us-east-2"

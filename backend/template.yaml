@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Serves published Notion pages as blog posts for justin-xing.github.io.
+
+Parameters:
+  NotionToken:
+    Type: String
+    NoEcho: true
+  NotionDatabaseId:
+    Type: String
+
+Resources:
+  PostsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: index.handler
+      Runtime: nodejs22.x
+      Architectures: [arm64]
+      MemorySize: 128
+      Timeout: 10
+      # Not set: ReservedConcurrentExecutions. New accounts start with a
+      # concurrency quota of 10 and AWS refuses any reservation that leaves
+      # fewer than 10 unreserved. Once the quota is raised, cap this at ~5 so
+      # a spammed public URL can't run up the bill.
+      Environment:
+        Variables:
+          NOTION_TOKEN: !Ref NotionToken
+          NOTION_DATABASE_ID: !Ref NotionDatabaseId
+      FunctionUrlConfig:
+        AuthType: NONE
+        Cors:
+          AllowOrigins:
+            - https://justin-xing.github.io
+            - http://localhost:3000
+          AllowMethods: [GET]
+
+Outputs:
+  FunctionUrl:
+    Value: !GetAtt PostsFunctionUrl.FunctionUrl
