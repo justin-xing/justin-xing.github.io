@@ -11,7 +11,7 @@ const PREVIEW_HEIGHT = 180;
 // card's own. Render preview links as plain text; the real post keeps them.
 const PREVIEW_COMPONENTS = { a: ({ children }) => <span>{children}</span> };
 
-const BlogCard = ({ id, icon, title, date, body }) => {
+const BlogCard = ({ kind, id, icon, title, date, body }) => {
   const [clipped, setClipped] = useState(false);
   const contentRef = useRef(null);
 
@@ -35,7 +35,7 @@ const BlogCard = ({ id, icon, title, date, body }) => {
   }, []);
 
   return (
-    <Link to={`/blog/${id}`} className={classes.card}>
+    <Link to={`/${kind}/${id}`} className={classes.card}>
       <div className={classes.header}>
         <span className={classes.icon}>{icon}</span>
         <div>

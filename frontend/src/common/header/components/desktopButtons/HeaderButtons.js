@@ -14,6 +14,9 @@ const HeaderButtons = () => {
             <div className={classes.link}>
                 <Link to='/blog' style={{textDecoration: 'none', color: 'var(--text)'}}>BLOG</Link>
             </div>
+            <div className={classes.link}>
+                <Link to='/readings' style={{textDecoration: 'none', color: 'var(--text)'}}>READINGS</Link>
+            </div>
         </div>
     )
 }

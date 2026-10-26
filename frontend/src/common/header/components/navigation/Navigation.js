@@ -31,6 +31,8 @@ const Navigation = (props) => {
             setPath("PROJECTS");
         } else if (locationPath.startsWith("/blog")) {
             setPath("BLOG");
+        } else if (locationPath.startsWith("/readings")) {
+            setPath("READINGS");
         }
     }, [locationPath]);
 
@@ -38,6 +40,7 @@ const Navigation = (props) => {
         ["About", "/about"],
         ["Projects", "/projects"],
         ["Blog", "/blog"],
+        ["Readings", "/readings"],
     ];
 
     const ListItems = () => {
