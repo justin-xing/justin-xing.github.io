@@ -34,8 +34,10 @@ function App() {
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
         { path: "projects", element: <Projects /> },
-        { path: "blog", element: <Blog /> },
-        { path: "blog/:slug", element: <BlogPost /> },
+        { path: "blog", element: <Blog kind="blog" /> },
+        { path: "blog/:slug", element: <BlogPost kind="blog" /> },
+        { path: "readings", element: <Blog kind="readings" /> },
+        { path: "readings/:slug", element: <BlogPost kind="readings" /> },
       ],
     },
   ]);

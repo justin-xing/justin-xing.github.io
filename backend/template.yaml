@@ -6,7 +6,9 @@ Parameters:
   NotionToken:
     Type: String
     NoEcho: true
-  NotionDatabaseId:
+  BlogDatabaseId:
+    Type: String
+  ReadingsDatabaseId:
     Type: String
 
 Resources:
@@ -26,7 +28,8 @@ Resources:
       Environment:
         Variables:
           NOTION_TOKEN: !Ref NotionToken
-          NOTION_DATABASE_ID: !Ref NotionDatabaseId
+          BLOG_DATABASE_ID: !Ref BlogDatabaseId
+          READINGS_DATABASE_ID: !Ref ReadingsDatabaseId
       FunctionUrlConfig:
         AuthType: NONE
         Cors:

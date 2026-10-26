@@ -8,9 +8,9 @@ import { usePosts } from "./posts";
 
 const SITE_TITLE = "Justin's Space";
 
-const BlogPost = () => {
+const BlogPost = ({ kind }) => {
   const { slug } = useParams();
-  const { posts, loading } = usePosts();
+  const { posts, loading } = usePosts(kind);
   const post = posts.find((p) => p.id === slug);
 
   // React Router keeps the scroll position, so arriving from a card partway
@@ -30,8 +30,8 @@ const BlogPost = () => {
     return (
       <main className={classes.page}>
         <article className={classes.post}>
-          <Link to="/blog" className={classes.back}>
-            ← BLOG
+          <Link to={`/${kind}`} className={classes.back}>
+            ← {kind.toUpperCase()}
           </Link>
           <CircularProgress
             size={24}
@@ -47,8 +47,8 @@ const BlogPost = () => {
     return (
       <main className={classes.page}>
         <article className={classes.post}>
-          <Link to="/blog" className={classes.back}>
-            ← BLOG
+          <Link to={`/${kind}`} className={classes.back}>
+            ← {kind.toUpperCase()}
           </Link>
           <div className={classes.title}>Post Not Found</div>
           <div className={classes.missing}>
@@ -62,8 +62,8 @@ const BlogPost = () => {
   return (
     <main className={classes.page}>
       <article className={classes.post}>
-        <Link to="/blog" className={classes.back}>
-          ← BLOG
+        <Link to={`/${kind}`} className={classes.back}>
+          ← {kind.toUpperCase()}
         </Link>
         <div className={classes.header}>
           <span className={classes.icon}>{post.icon}</span>

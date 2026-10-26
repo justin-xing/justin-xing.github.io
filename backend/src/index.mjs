@@ -18,7 +18,12 @@ const CACHE_MS = 5 * 60 * 1000;
 // If Notion is failing, keep serving the last good list only while its image
 // URLs are still valid.
 const STALE_MS = 50 * 60 * 1000;
-let cache; // { at, body }, survives between invocations on a warm instance
+// ?db= picks the database; anything else gets the blog.
+const DATABASES = {
+  blog: process.env.BLOG_DATABASE_ID,
+  readings: process.env.READINGS_DATABASE_ID,
+};
+const caches = {}; // db -> { at, body }, survives between invocations on a warm instance
 
 const notion = async (path, body, retries = 3) => {
   const res = await fetch(NOTION + path, {
@@ -166,17 +171,20 @@ const toPost = async (page) => {
   };
 };
 
-export const handler = async () => {
+export const handler = async (event) => {
+  const requested = event?.queryStringParameters?.db;
+  const db = Object.hasOwn(DATABASES, requested ?? "") ? requested : "blog";
+  let cache = caches[db];
   if (!cache || Date.now() - cache.at > CACHE_MS) {
     try {
-      const pages = await all(`/databases/${process.env.NOTION_DATABASE_ID}/query`, {
+      const pages = await all(`/databases/${DATABASES[db]}/query`, {
         filter: { property: "Published", checkbox: { equals: true } },
         sorts: [{ property: "Date", direction: "descending" }],
       });
       // ponytail: one request per post at once, leaning on the 429 retry in
       // notion(); with dozens of posts, fetch them in small batches instead.
       const posts = await Promise.all(pages.map(toPost));
-      cache = { at: Date.now(), body: JSON.stringify(posts) };
+      cache = caches[db] = { at: Date.now(), body: JSON.stringify(posts) };
     } catch (err) {
       console.error(err);
       // A stale list beats an error page, until its image URLs have expired.
